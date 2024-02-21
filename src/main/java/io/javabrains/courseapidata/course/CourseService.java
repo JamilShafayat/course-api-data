@@ -26,7 +26,7 @@ public class CourseService {
         return course;
     }
 
-    public Course updateCourse(String id, Course course) {
+    public Course updateCourse(Course course) {
         courseRepository.save(course);
         return course;
     }
