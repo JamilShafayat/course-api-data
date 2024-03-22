@@ -1,4 +1,4 @@
-package io.javabrains.courseapidata.transportation;
+package io.javabrains.courseapidata.destination;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TransportationService {
+public class DestinationService {
     @Autowired
-    private TransportationRepository courseRepository;
+    private DestinationRepository courseRepository;
 
     public List<Destination> getAllCourses(String topicId) {
         List<Destination> courses = new ArrayList<>();
