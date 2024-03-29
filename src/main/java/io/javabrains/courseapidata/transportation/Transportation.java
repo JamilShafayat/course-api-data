@@ -12,18 +12,14 @@ public class Transportation {
     private String name;
     private String description;
 
-    @ManyToOne
-    private Topic topic;
-
     public Transportation() {
     }
 
-    public Transportation(String id, String name, String description, String topicId) {
+    public Transportation(String id, String name, String description) {
         super();
         this.id = id;
         this.name = name;
         this.description = description;
-        this.topic = new Topic(topicId, "", "");
     }
 
     public String getId() {
@@ -48,13 +44,5 @@ public class Transportation {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Topic getTopic() {
-        return topic;
-    }
-
-    public void setTopic(Topic topic) {
-        this.topic = topic;
     }
 }
