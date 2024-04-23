@@ -1,15 +1,19 @@
 package io.javabrains.courseapidata.course;
 
 import io.javabrains.courseapidata.topic.Topic;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
+@Table(name = "COURSE")
 public class Course {
     @Id
+    @Column(name = "ID")
     private String id;
+    @Column(name = "NAME")
     private String name;
+    @Column(name = "DESCRIPTION")
     private String description;
 
     @ManyToOne
